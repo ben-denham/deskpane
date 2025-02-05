@@ -4,4 +4,10 @@ version = "0.1.0"
 description = "Demo of using pywebview to run a Panel app as a desktop app."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "cryptography>=44.0.0",
+    "flask>=3.1.0",
+    "panel>=1.6.0",
+    "plotly>=6.0.0",
+    "pywebview[qt]>=5.4",
+]
