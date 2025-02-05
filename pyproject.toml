@@ -1,0 +1,7 @@
+[project]
+name = "deskpane"
+version = "0.1.0"
+description = "Demo of using pywebview to run a Panel app as a desktop app."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
