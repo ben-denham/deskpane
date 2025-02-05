@@ -5,6 +5,8 @@ Based on:
 * https://panel.holoviz.org/how_to/integrations/FastAPI_Tornado.html
 """
 import os
+from pathlib import Path
+import sys
 
 from bokeh.embed import server_document
 from flask import Flask, render_template
@@ -13,7 +15,10 @@ import webview
 
 from app import build_app
 
-server = Flask(__name__)
+base_dir = Path('.')
+if hasattr(sys, '_MEIPASS'):
+    base_dir = Path(sys._MEIPASS)
+server = Flask(__name__, template_folder=base_dir / 'templates')
 server.config['SEND_FILE_MAX_AGE_DEFAULT'] = 1  # disable caching
 
 

@@ -11,3 +11,8 @@ dependencies = [
     "plotly>=6.0.0",
     "pywebview[qt]>=5.4",
 ]
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.11.1",
+]
